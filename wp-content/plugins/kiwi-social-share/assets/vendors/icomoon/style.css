@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/https://meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.eot?dsgpst');
-  src:  url('/https://meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.eot?dsgpst#iefix') format('embedded-opentype'),
-    url('/https://meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.ttf?dsgpst') format('truetype'),
-    url('/https://meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.woff?dsgpst') format('woff'),
-    url('/https://meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.svg?dsgpst#icomoon') format('svg');
+  src:  url('http://localhost/https:/meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.eot?dsgpst');
+  src:  url('http://localhost/https:/meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.eot?dsgpst#iefix') format('embedded-opentype'),
+    url('http://localhost/https:/meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.ttf?dsgpst') format('truetype'),
+    url('http://localhost/https:/meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.woff?dsgpst') format('woff'),
+    url('http://localhost/https:/meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/fonts/icomoon.svg?dsgpst#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
