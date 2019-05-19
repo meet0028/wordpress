@@ -1,6 +1,6 @@
 <?php
 /**
- *    The template for dispalying the single.
+ *    The template for displaying the single.
  *
  * @package    WordPress
  * @subpackage illdy
@@ -22,8 +22,8 @@ $sidebar_enabled = get_post_meta( $post->ID, 'illdy-sidebar-enable', true );
 
 				<section id="blog">
 					<?php
-					if ( have_posts() ):
-						while ( have_posts() ):
+					if ( have_posts() ) :
+						while ( have_posts() ) :
 							the_post();
 							get_template_part( 'template-parts/content', 'single' );
 						endwhile;

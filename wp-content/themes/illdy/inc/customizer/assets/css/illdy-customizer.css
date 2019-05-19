@@ -1,14 +1,7 @@
 ul.accordion-section {
     min-height: 100% !important;
 }
-.description.customize-section-description {
-	background-color: #FFF;
-	border-radius: 5px;
-	padding: 15px;
-	border: 1px solid #CCC;
-	font-style: italic;
-	line-height: 1.5;
-}
+
 .wp-admin .checkbox_switch {
     display: inline-block;
     width: 100%;
@@ -124,22 +117,12 @@ ul.accordion-section {
 }
 
 .mte-tooltip {
-    width: 150px;
-    position: absolute;
-    background: #55AAD3;
-    color: #EEE;
-    font-size: 12px;
-    min-height: 50px;
-    border-radius: 5px;
     right: -75px;
     top: -10px;
     z-index: 10;
-    display: none;
-    padding: 12px;
-    line-height: 1.5;
-    font-family: 'Arial', sans-serif;
     transform: translateY(-100%);
     left: auto;
+    bottom: auto;
 }
 
 .dashicons.dashicons-editor-help {
@@ -569,6 +552,10 @@ body .wp-full-overlay{
 }
 .wp-switch-editor.close-wp-editor {
     color: #e34113;
+}
+
+#customize-control-illdy_contact_us_general_contact_form_7 .customize-control-title {
+    height:auto;
 }
 
 @media (max-width: 700px) {

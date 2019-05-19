@@ -1,13 +1,16 @@
 #header .top-header .header-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
-	width: 250px;
 	padding-top: 0;
 	top: 0;
-	left: 250px;
+	left: 200px;
 }
 
 #header .top-header .header-navigation ul li.menu-item-has-children .sub-menu {
 	display: block;
 	visibility: hidden;
+	z-index: 99;
+}
+#header .top-header .header-navigation ul li.menu-item-has-children:hover > .sub-menu {
+	visibility: visible;
 }
 
 .woocommerce {}
@@ -119,12 +122,19 @@
 	height: 31px;
 }
 
-.woocommerce input,
+.woocommerce input:not( [type="checkbox"] ):not( [type="radio"] ),
 .woocommerce textarea {
 	border: 1px solid #cccccc;
 }
-
-
+.woocommerce-checkout-payment input[type="submit"] {
+	border: 0 none;
+}
+.woocommerce form .form-row .input-checkbox {
+	position: relative;
+}
+.woocommerce a.button {
+    min-height: auto;
+}
 @media only screen and (max-width: 560px) {
 	#contact-us .section-content .contact-us-box .box-left {
 		width: 100%;
