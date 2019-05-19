@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Techno Solution</title>
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -28,6 +28,7 @@ img.emoji {
 </style>
 	<link rel='stylesheet' id='wp-block-library-css'  href='https://meet0028.github.io/wordpress/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='https://meet0028.github.io/wordpress/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='https://meet0028.github.io/wordpress/wp-content/plugins/fancybox-for-wordpress/assets/css/fancybox.css?ver=1.3.4' type='text/css' media='all' />
 <link rel='stylesheet' id='icomoon-css'  href='https://meet0028.github.io/wordpress/wp-content/plugins/kiwi-social-share/assets/vendors/icomoon/style.css?ver=2.0.15' type='text/css' media='all' />
 <link rel='stylesheet' id='illdy-pace-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/css/pace.min.css?ver=5.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='illdy-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700,300,300italic|Lato:300,400,700,900|Poppins:300,400,500,600,700' type='text/css' media='all' />
@@ -36,10 +37,16 @@ img.emoji {
 <link rel='stylesheet' id='font-awesome-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/css/font-awesome.min.css?ver=4.5.0' type='text/css' media='all' />
 <link rel='stylesheet' id='owl-carousel-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/css/owl-carousel.min.css?ver=2.0.0' type='text/css' media='all' />
 <link rel='stylesheet' id='illdy-main-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/css/main.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='illdy-custom-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/css/custom.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='illdy-custom-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/css/custom.css?ver=5.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='illdy-style-css'  href='https://meet0028.github.io/wordpress/wp-content/themes/illdy/style.css?ver=1.0.16' type='text/css' media='all' />
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/plugins/fancybox-for-wordpress/assets/js/jquery.fancybox.js?ver=1.3.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var paceOptions = {"restartOnRequestAfter":"0","restartOnPushState":"0"};
+/* ]]> */
+</script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/pace/pace.min.js?ver=5.1.1'></script>
 <link rel='https://api.w.org/' href='https://meet0028.github.io/wordpress/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://meet0028.github.io/wordpress/xmlrpc.php?rsd" />
@@ -49,21 +56,96 @@ img.emoji {
 <link rel='shortlink' href='https://meet0028.github.io/wordpress/' />
 <link rel="alternate" type="application/json+oembed" href="https://meet0028.github.io/wordpress/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmeet0028.github.io%2Fwordpress%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://meet0028.github.io/wordpress/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmeet0028.github.io%2Fwordpress%2F&#038;format=xml" />
+
+<!-- Fancybox for WordPress v3.2.1 -->
+<style type="text/css">
+	div.fancybox-caption{display:none !important;}
+	
+	img.fancybox-image{border-width:10px;border-color:#FFFFFF;border-style:solid;height:auto;}
+	div.fancybox-bg{background-color:rgba(102,102,102,0.3);opacity:1 !important;}div.fancybox-content{border-color:#FFFFFF}
+	div#fancybox-title{background-color:#FFFFFF}
+	div.fancybox-content{background-color:#FFFFFF}
+	div#fancybox-title-inside{color:#333333}
+	
+	
+	
+	div.fancybox-caption p.caption-title{display:inline-block}
+	div.fancybox-caption p.caption-title{font-size:14px}
+	div.fancybox-caption p.caption-title{color:#333333}
+	div.fancybox-caption {color:#333333}div.fancybox-caption p.caption-title {background:#fff; width:auto;padding:10px 30px;}
+</style><script type="text/javascript">
+	jQuery(function(){
+
+		jQuery.fn.getTitle = function() { // Copy the title of every IMG tag and add it to its parent A so that fancybox can show titles
+			var arr = jQuery("a[data-fancybox]");
+									jQuery.each(arr, function() {
+										var title = jQuery(this).children("img").attr("title");
+										 var caption = jQuery(this).next("figcaption").html();
+                                        if(caption && title){jQuery(this).attr("title",title+" " + caption)}else if(title){ jQuery(this).attr("title",title);}else if(caption){jQuery(this).attr("title",caption);}
+									});			}
+
+		// Supported file extensions
+
+                var thumbnails = jQuery("a:has(img)").not(".nolightbox").not('.envira-gallery-link').not('.ngg-simplelightbox').filter(function () {
+            return /\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+        });
+        
+
+		// Add data-type iframe for links that are not images or videos.
+        var iframeLinks = jQuery('.fancyboxforwp').filter( function() { return ! /\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href')) }).filter( function() { return ! /vimeo|youtube/i.test(jQuery(this).attr('href')) });
+        iframeLinks.attr({ "data-type" : "iframe" }).getTitle();
+
+				// Gallery All
+		thumbnails.addClass("fancyboxforwp").attr("data-fancybox","gallery").getTitle();
+        iframeLinks.attr({ "data-fancybox":"gallery" }).getTitle();
+
+		// Gallery type NONE
+		
+
+
+		// Call fancybox and apply it on any link with a rel atribute that starts with "fancybox", with the options set on the admin panel
+		jQuery("a.fancyboxforwp").fancyboxforwp({
+			loop: false,
+			smallBtn: false,
+			zoomOpacity: "auto",
+			animationEffect: "fade",
+			animationDuration: 500,
+			transitionEffect: "fade",
+			transitionDuration : "300",
+			overlayShow: true,
+			overlayOpacity: "0.3",
+			titleShow: true,
+			titlePosition: "inside",
+			keyboard: true,
+			showCloseButton: false,
+			arrows: true,
+			clickContent: false,
+            clickSlide: "close",
+			wheel: false,
+			toolbar: true,
+			preventCaptionOverlap: true,
+			onInit: function() { },			onDeactivate: function() { },			beforeClose: function() { },			afterShow: function() { },			afterClose: function() { },			caption : function( instance, item ) {var testing = jQuery(this).context.title;var caption = jQuery(this).data('caption') || '';if ( item.type === 'image' && testing.length ) {caption = (caption.length ? caption + '<br />' : '') + '<p class="caption-title">'+testing+'</p>' ;}return caption;},
+			afterLoad : function( instance, current ) {current.$content.append('<div class=\"fancybox-custom-caption\" style=\" position: absolute;left:0;right:0;color:#000;padding-top:10px;bottom:-50px;margin:0 auto;text-align:center; \">' + current.opts.caption + '</div>');},
+					});
+		
+	})
+</script>
+<!-- END Fancybox for WordPress -->
 <style type="text/css">.pace .pace-progress {background-color: #50d313; color: #50d313;}.pace .pace-activity {box-shadow: inset 0 0 0 2px #50d313, inset 0 0 0 7px #ffffff;}.pace-overlay {background-color: #ffffff;}</style><link rel="icon" href="https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/cropped-new-techno-32x32.jpg" sizes="32x32" />
 <link rel="icon" href="https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/cropped-new-techno-192x192.jpg" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/cropped-new-techno-180x180.jpg" />
 <meta name="msapplication-TileImage" content="https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/cropped-new-techno-270x270.jpg" />
 
-        <style type="text/css" id="illdy-about-section-css">#header.header-front-page {background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/123.jpg) !important;}#header.header-front-page {background-position-y: center;}#header.header-front-page {background-size: cover !important;}</style>
-        <style type="text/css" id="illdy-latestnews-section-css">#latest-news {background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/nature-2.jpg) !important;}</style>
-        <style type="text/css" id="illdy-fullwidth-section-css"></style>
-        <style type="text/css" id="illdy-about-section-css"></style>
-        <style type="text/css" id="illdy-projects-section-css">#projects {background-image: url(https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;}#projects {background-size: auto !important;}#projects {background-repeat: repeat !important;}</style>
-        <style type="text/css" id="illdy-services-section-css"></style>
-        <style type="text/css" id="illdy-team-section-css">#team {background-image: url(https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;}#team {background-size: auto !important;}#team {background-repeat: repeat !important;}</style>
-        <style type="text/css" id="illdy-testimonials-section-css">#testimonials {background-image: url(https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/images/testiomnials-background.jpg) !important;}</style>
+		<style type="text/css" id="illdy-about-section-css">#header.header-front-page {background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/123.jpg) !important;}#header.header-front-page {background-position-y: center;}#header.header-front-page {background-size: cover !important;}#header.header-front-page {background-attachment: scroll !important;}#header.header-front-page {background-color: #ffffff;}#header.header-front-page .bottom-header .header-button-one {background-color: rgba( 0, 0, 0, .2 );}#header.header-front-page .bottom-header .header-button-one:hover {background-color: rgba( 0, 0, 0, .1 );}#header.header-front-page .bottom-header .header-button-two {background-color: #026691;}#header.header-front-page .bottom-header .header-button-two:hover {background-color: #95c5e2;}#header.header-front-page .bottom-header h1 {color: #ffffff;}#header.header-front-page .bottom-header span.span-dot {color: #026691;}</style>
+		<style type="text/css" id="illdy-latestnews-section-css">#latest-news {background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/nature-2.jpg) !important;}</style>
+		<style type="text/css" id="illdy-fullwidth-section-css"></style>
+		<style type="text/css" id="illdy-about-section-css"></style>
+		<style type="text/css" id="illdy-projects-section-css">#projects:before {background-image: url(https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;}#projects:before {background-size: auto !important;}#projects:before {background-repeat: repeat !important;}</style>
+		<style type="text/css" id="illdy-services-section-css"></style>
+		<style type="text/css" id="illdy-team-section-css">#team:before {background-image: url(https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;}#team:before {background-size: auto !important;}#team:before {background-repeat: repeat !important;}</style>
+		<style type="text/css" id="illdy-testimonials-section-css">#testimonials:before {background-image: url(https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/images/testiomnials-background.jpg) !important;}#testimonials:before {background-attachment: scroll !important;}</style>
 
-    </head>
+	</head>
 <body class="home page-template-default page page-id-8">
 	<div class="pace-overlay"></div>
 <header id="header" class="header-front-page" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/123.jpg);background-attachment: fixed;">
@@ -72,12 +154,12 @@ img.emoji {
 			<div class="row">
 				<div class="col-sm-4 col-xs-8">
 
-																		<a href="https://meet0028.github.io/wordpress" title="Techno Solution" class="header-logo">Techno Solution</a>
-											
+																<a href="https://meet0028.github.io/wordpress" title="Techno Solution" class="header-logo">Techno Solution</a>
+										
 				</div><!--/.col-sm-2-->
 				<div class="col-sm-8 col-xs-4">
 					<nav class="header-navigation">
-					<ul id="menu-top-menu" class="clearfix"><li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-21"><a href="https://meet0028.github.io/wordpress/" aria-current="page">Home</a></li>
+						<ul id="menu-top-menu" class="clearfix"><li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-21"><a href="https://meet0028.github.io/wordpress/" aria-current="page">Home</a></li>
 <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://meet0028.github.io/wordpress/about/">About</a></li>
 <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="https://meet0028.github.io/wordpress/blog/">Blog</a></li>
 <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="https://meet0028.github.io/wordpress/contact/">Contact</a></li>
@@ -102,12 +184,14 @@ img.emoji {
 						<h1>JAVA <span class="span-dot">.</span> ANDROID<span class="span-dot">.</span> PYTHON</h1>
 					</div><!--/.col-sm-12-->
 								<div class="col-sm-8 col-sm-offset-2">
-																			</div><!--/.col-sm-8.col-sm-offset-2-->
+																					<a href="https://harshp9196.github.io/newdemo/#page2" title="Learn more" class="header-button-two">Learn more</a>
+									</div><!--/.col-sm-8.col-sm-offset-2-->
 			</div><!--/.row-->
 		</div><!--/.container-->
 	</div><!--/.bottom-header.front-page-->
 
-</header><!--/#header-->				<section class="front-page-section" id="static-page-content">
+</header><!--/#header-->
+				<section class="front-page-section" id="static-page-content">
 					<div class="section-header">
 						<div class="container">
 							<div class="row">
@@ -132,12 +216,22 @@ img.emoji {
 				</section>
 			
 
+<section id="about" class="front-page-section" style="padding-top: 130px;">
+		<div class="section-content">
+		<div class="container">
+			<div class="row">
+				<div id="illdy_skill-3" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-0 widget_illdy_skill"><div class="skill" data-skill-progress-bar-width="80" data-skill-color="#dda146"><div class="skill-top clearfix"><div class="skill-progress-bar"></div></div><!--/.skill-top.clearfix--><div class="skill-bottom"><i class="fa fa fa-code"></i><span>Web devloping</span></div><!--/.skill-bottom--></div><!--/.skill--></div><div id="illdy_skill-4" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-0 widget_illdy_skill"><div class="skill" data-skill-progress-bar-width="90" data-skill-color="#dda146"><div class="skill-top clearfix"><div class="skill-progress-bar"></div></div><!--/.skill-top.clearfix--><div class="skill-bottom"><i class="fa fa fa-pencil"></i><span>Design</span></div><!--/.skill-bottom--></div><!--/.skill--></div><div id="illdy_skill-5" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-0 widget_illdy_skill"><div class="skill" data-skill-progress-bar-width="86" data-skill-color="#dda146"><div class="skill-top clearfix"><div class="skill-progress-bar"></div></div><!--/.skill-top.clearfix--><div class="skill-bottom"><i class="fa fa fa-cubes"></i><span>Android</span></div><!--/.skill-bottom--></div><!--/.skill--></div>			</div><!--/.row-->
+		</div><!--/.container-->
+	</div><!--/.section-content-->
+</section><!--/#about.front-page-section-->
+
+
 
 <section id="projects" class="front-page-section" style="padding-top: 0;">
 		<div class="section-content">
 		<div class="container-fluid">
 			<div class="row inline-columns">
-				<div id="illdy_project-4" class="col-sm-3 col-xs-6 no-padding widget_illdy_project"><a href="" title="Project" class="project no-url" data-fancybox="gallery" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/JAVA-2-e1557920457869.png);"><span class="project-overlay"></span></a></div><div id="illdy_project-6" class="col-sm-3 col-xs-6 no-padding widget_illdy_project"><a href="" title="Project" class="project no-url" data-fancybox="gallery" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/PYTHON-2-e1557920772616.png);"><span class="project-overlay"></span></a></div><div id="illdy_project-7" class="col-sm-3 col-xs-6 no-padding widget_illdy_project"><a href="" title="Project" class="project no-url" data-fancybox="gallery" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/ANDROID-e1557920997376.jpg);"><span class="project-overlay"></span></a></div>			</div><!--/.row-->
+				<div id="illdy_project-4" class="col-sm-3 col-xs-6 no-padding widget_illdy_project"><a href="" title="Java" class="project no-url" data-fancybox="gallery" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/JAVA-2-e1557920457869.png);"><span class="project-overlay"></span></a></div><div id="illdy_project-6" class="col-sm-3 col-xs-6 no-padding widget_illdy_project"><a href="" title="Python" class="project no-url" data-fancybox="gallery" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/PYTHON-2-e1557920772616.png);"><span class="project-overlay"></span></a></div><div id="illdy_project-7" class="col-sm-3 col-xs-6 no-padding widget_illdy_project"><a href="" title="Android" class="project no-url" data-fancybox="gallery" style="background-image: url(https://meet0028.github.io/wordpress/wp-content/uploads/2019/05/ANDROID-e1557920997376.jpg);"><span class="project-overlay"></span></a></div>			</div><!--/.row-->
 		</div><!--/.container-fluid-->
 	</div><!--/.section-content-->
 </section><!--/#projects.front-page-section-->
@@ -159,6 +253,15 @@ img.emoji {
 
 
 <section id="services" class="front-page-section">
+			<div class="section-header">
+			<div class="container">
+				<div class="row">
+											<div class="col-sm-12">
+							<h3>Services</h3>
+						</div><!--/.col-sm-12-->
+														</div><!--/.row-->
+			</div><!--/.container-->
+		</div><!--/.section-header-->
 		<div class="section-content">
 		<div class="container">
 			<div class="row inline-columns">
@@ -181,7 +284,7 @@ img.emoji {
 					<div class="row blog-carousel">
 																										
 							<div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
-								<div class="post" style="padding-top: 40px;">
+								<div class="post" style="								padding-top: 40px;">
 																		<h5><a href="https://meet0028.github.io/wordpress/hello-world/" title="Hello world!" class="post-title">Hello world!</a></h5>
 									<div class="post-entry">
 										Welcome to WordPress. This is your first post. Edit or delete it, then start writing!									</div><!--/.post-entry-->
@@ -270,38 +373,43 @@ img.emoji {
 	</section><!--/#contact-us.front-page-section-->
 
 
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-						<div class="col-md-3 col-sm-6 col-xs-12">
-				<div id="text-5" class="widget widget_text"><div class="widget-title"><h5>About This Site</h5></div>			<div class="textwidget"><p>This may be a good place to introduce yourself and your site or include some credits.</p>
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+								<div class="col-md-3 col-sm-6 col-xs-12">
+					<div id="text-5" class="widget widget_text"><div class="widget-title"><h5>About This Site</h5></div>			<div class="textwidget"><p>This may be a good place to introduce yourself and your site or include some credits.</p>
 </div>
-		</div><div id="search-4" class="widget widget_search"><div class="widget-title"><h5>Search</h5></div><form role="search" method="get" class="search-form" action="https://meet0028.github.io/wordpress/">
-    <div class="search-form-box">
-    	<input type="submit" id="searchsubmit" value="" />
-        <input type="search" id="s" placeholder="Search..." value="" name="s" title="Search for:" />
-    </div><!--/.search-form-box-->
-</form><!--/.search-form--></div>			</div><!--/.col-sm-3-->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-							</div><!--/.col-sm-3-->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-							</div><!--/.col-sm-3-->
-			<div class="col-md-3 col-sm-6 col-xs-12">
-							</div><!--/.col-sm-3-->
-		</div><!--/.row-->
-	</div><!--/.container-->
+		</div><div id="search-4" class="widget widget_search"><div class="widget-title"><h5>Search</h5></div>
+<form role="search" method="get" class="search-form" action="https://meet0028.github.io/wordpress/">
+	<div class="search-form-box">
+		<input type="submit" id="searchsubmit" value="" />
+		<input type="search" id="s" placeholder="Search..." value="" name="s" title="Search for:" />
+	</div><!--/.search-form-box-->
+</form><!--/.search-form-->
+</div>				</div><!--/.col-sm-3-->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+									</div><!--/.col-sm-3-->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+									</div><!--/.col-sm-3-->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+									</div><!--/.col-sm-3-->
+			</div><!--/.row-->
+		</div><!--/.container-->
+	</footer>
+
 	<div class="bottom-footer">
 		<div class="container">
 			<p class="copyright">
-<!--				<span> <a href="http://colorlib.com/wp/themes/illdy" title="Illdy" target="_blank"></a>.</span> -->
+				<!--<span>Theme: <a href="http://colorlib.com/wp/themes/illdy" title="Illdy" target="_blank">Illdy</a>.</span>-->
 				<span class="bottom-copyright" data-customizer="copyright-credit">© Copyright 2019. All Rights Reserved By Techno Solution.</span>
-			</p>
+			</p> 
 		</div>
 	</div>
-</footer><!--/#footer-->
+
+
 <script type='text/javascript'>
 /* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/meet0028.github.io\/wordpress\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+var wpcf7 = {"apiSettings":{"root":"https:\/\/meet0028.github.io\/wordpress\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.1'></script>
@@ -312,18 +420,11 @@ var wpcf7 = {"apiSettings":{"root":"https:\/\/meet0028.github.io\/wordpress\/wp-
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/owl-carousel/owl-carousel.min.js?ver=2.0.0'></script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/count-to/count-to.min.js?ver=5.1.1'></script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/visible/visible.min.js?ver=5.1.1'></script>
-<script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/parallax.min.js?ver=1.0.16'></script>
+<script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/parallax/parallax.min.js?ver=1.0.16'></script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/plugins.min.js?ver=1.0.16'></script>
-<script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/scripts.min.js?ver=1.0.16'></script>
+<script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-content/themes/illdy/layout/js/scripts.js?ver=1.0.16'></script>
 <script type='text/javascript'>
 if( jQuery('.blog-carousel > .illdy-blog-post').length > 3 ){jQuery('.blog-carousel').owlCarousel({'items': 3,'loop': true,'dots': false,'nav' : true, 'navText':['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'], responsive : { 0 : { items : 1 }, 480 : { items : 2 }, 900 : { items : 3 } }});}
 </script>
 <script type='text/javascript' src='https://meet0028.github.io/wordpress/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
-</body>
-</html>
-<!--
-Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
-
-
-Served from: localhost @ 2019-05-17 03:58:47 by W3 Total Cache
--->
+</body></html>
